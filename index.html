@@ -10,29 +10,71 @@
 </head>
 <body>
 
-    <!-- Header Section with Line Separator -->
+    <!-- Header Section with Full Width Line Separator -->
     <header>
         <h1>POLYBIUS</h1>
         <hr>
     </header>
 
-    <section class="login-section">
-        <a href="#">LOGIN</a>
-        <a href="#">CREATE NEW ACCOUNT</a>
+    <!-- About Us Section -->
+    <section class="about-us-section">
+        <h2>About Us</h2>
+        <p>POLYBIUS is an all-in-one employment platform designed to simplify the job search process and streamline recruitment for employers. Our platform leverages advanced technology, including artificial intelligence, to connect job seekers with their ideal opportunities. We focus on providing personalized assistance, offering tools that help create outstanding resumes, automate job matching, and aggregate job listings in one easy-to-navigate space.</p>
+        
+        <p>Employers benefit from our automated candidate lineup and evaluation features, making it easier to find and connect with the best talent quickly. Whether you are seeking a job or looking to hire, POLYBIUS is your trusted employment solution.</p>
     </section>
 
+    <!-- Services Section with Buttons -->
     <section class="services-section">
-        <p>POLYBIUS is an all-in-one employment platform for job seekers and employers of all types. Our state-of-the-art services include:</p>
-        <div class="services-list">
-            Resume Creation and Assistance • Automated Job Matching • Job Listing Aggregation • Personalized Candidate Lineup • Candidate Evaluations
+        <h2>Our Services</h2>
+        <div class="services-buttons">
+            <button onclick="showService('resume')">Resume Creation and Assistance</button>
+            <button onclick="showService('job-matching')">Automated Job Matching</button>
+            <button onclick="showService('job-listing')">Job Listing Aggregation</button>
+            <button onclick="showService('candidate-lineup')">Personalized Candidate Lineup</button>
+            <button onclick="showService('evaluations')">Candidate Evaluations</button>
         </div>
-
-        <div class="resume-box">
-            <h2>Resume Creation and Assistance</h2>
-            <p>The POLYBIUS platform offers a tool that allows job seekers to optimize the presentation of their skills, experiences, and story to find the perfect job match. By utilizing Artificial Intelligence, you will be able to represent yourself to employers with assurance that they hear you loud and clear.</p>
-            <a href="#">Learn More</a>
+        
+        <!-- Display Area for Selected Service -->
+        <div class="service-display" id="service-display">
+            <!-- This will be populated dynamically based on the selection -->
         </div>
     </section>
+
+    <script>
+        function showService(service) {
+            const serviceDisplay = document.getElementById('service-display');
+            let content = '';
+
+            switch (service) {
+                case 'resume':
+                    content = `<h3>Resume Creation and Assistance</h3>
+                               <p>The POLYBIUS platform offers a tool that allows job seekers to optimize the presentation of their skills, experiences, and story to find the perfect job match. By utilizing Artificial Intelligence, you will be able to represent yourself to employers with assurance that they hear you loud and clear.</p>`;
+                    break;
+                case 'job-matching':
+                    content = `<h3>Automated Job Matching</h3>
+                               <p>Our platform uses advanced algorithms to match your skills and experience with the best job opportunities available in the market, making sure that you find the right fit faster.</p>`;
+                    break;
+                case 'job-listing':
+                    content = `<h3>Job Listing Aggregation</h3>
+                               <p>POLYBIUS aggregates job listings from multiple sources, providing you with a comprehensive view of job opportunities, all in one convenient place.</p>`;
+                    break;
+                case 'candidate-lineup':
+                    content = `<h3>Personalized Candidate Lineup</h3>
+                               <p>Employers benefit from our personalized candidate lineup, helping them connect with the most qualified candidates quickly and efficiently.</p>`;
+                    break;
+                case 'evaluations':
+                    content = `<h3>Candidate Evaluations</h3>
+                               <p>Our platform allows employers to evaluate candidates based on skills, experience, and fit, making the hiring process smoother and more accurate.</p>`;
+                    break;
+                default:
+                    content = `<p>Select a service to view more details.</p>`;
+                    break;
+            }
+
+            serviceDisplay.innerHTML = content;
+        }
+    </script>
 
 </body>
 </html>
