@@ -20,6 +20,7 @@ header {
     padding: 20px 0;
     position: fixed;
     top: 0;
+    z-index: 1000; /* Ensure header is above other content */
 }
 
 header h1 {
@@ -33,10 +34,11 @@ header hr {
     border: 1px solid #ccc;
 }
 
+/* Updated margin-top to account for header height */
 .about-us-section {
     text-align: center;
     max-width: 800px;
-    margin: 80px 0 40px; /* Adjusting for fixed header */
+    margin: 100px 0 40px; /* Increased top margin to 100px to account for fixed header */
     padding: 20px;
     background-color: white;
     border-radius: 8px;
