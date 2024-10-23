@@ -1,3 +1,6 @@
+/* Import the NATS font */
+@import url('https://fonts.googleapis.com/css2?family=Nats&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -12,18 +15,22 @@ body {
 
 header {
     text-align: center;
-    margin-top: 20px;
-    color: #333;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 header h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Nats', sans-serif; /* Applying NATS font */
+    margin-bottom: 10px;
 }
 
-header p {
-    font-size: 18px;
-    color: #666;
+header hr {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    margin-top: 10px;
 }
 
 .login-section {
