@@ -9,15 +9,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
 }
 
 header {
     text-align: center;
     width: 100%;
-    padding: 20px;
     background-color: #f9f9f9;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
 }
 
 header h1 {
@@ -27,73 +29,79 @@ header h1 {
 }
 
 header hr {
-    width: 60%;
-    margin: 0 auto;
+    width: 100%; /* Full width line */
     border: 1px solid #ccc;
-    margin-top: 10px;
 }
 
-.login-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0;
-}
-
-.login-section a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-    margin: 10px 0;
-    padding: 10px 20px;
+.about-us-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 80px 0 40px; /* Adjusting for fixed header */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.login-section a:hover {
-    background-color: #f0f0f0;
+.about-us-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Nats', sans-serif;
+}
+
+.about-us-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
 }
 
 .services-section {
     text-align: center;
-    margin: 20px;
+    margin: 40px 0;
 }
 
-.services-section p {
-    font-size: 14px;
-    color: #555;
+.services-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.services-list {
-    margin: 20px 0;
+.services-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.services-buttons button {
+    padding: 10px 20px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.resume-box {
-    border: 1px solid #ccc;
-    padding: 20px;
+.services-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+.service-display {
     max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
     background-color: white;
     border-radius: 8px;
     text-align: left;
 }
 
-.resume-box h2 {
+.service-display h3 {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.resume-box p {
+.service-display p {
     font-size: 14px;
     color: #666;
-}
-
-.resume-box a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-    margin-top: 10px;
 }
